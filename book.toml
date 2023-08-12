@@ -1,9 +1,0 @@
-[book]
-title = "1337.guide"
-authors = ["Samuel Acker"]
-language = "en"
-multilingual = false
-src = "src"
-
-[output.html]
-default-theme = "light"

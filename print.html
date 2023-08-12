@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>1337.guide</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded "><a href="fundamentals.html"><strong aria-hidden="true">1.</strong> Fundamentals</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hdacw.html"><strong aria-hidden="true">1.1.</strong> How Does A Computer Work?</a></li><li class="chapter-item expanded "><a href="linux-essentials.html"><strong aria-hidden="true">1.2.</strong> Linux Essentials</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">1.3.</strong> Code</a></li><li class="chapter-item expanded "><a href="networking.html"><strong aria-hidden="true">1.4.</strong> Networking</a></li><li class="chapter-item expanded "><a href="infrastructure.html"><strong aria-hidden="true">1.5.</strong> Infrastructure</a></li><li class="chapter-item expanded "><a href="browser-q.html"><strong aria-hidden="true">1.6.</strong> The Infamous Browser Question</a></li></ol></li><li class="chapter-item expanded "><a href="offensive.html"><strong aria-hidden="true">2.</strong> Offensive</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="web.html"><strong aria-hidden="true">2.1.</strong> Web</a></li><li class="chapter-item expanded "><a href="network.html"><strong aria-hidden="true">2.2.</strong> Network</a></li><li class="chapter-item expanded "><a href="post-exploitation.html"><strong aria-hidden="true">2.3.</strong> Post Exploitation</a></li><li class="chapter-item expanded "><a href="binary-exploitation.html"><strong aria-hidden="true">2.4.</strong> Binary Exploitation</a></li><li class="chapter-item expanded "><a href="social-engineering.html"><strong aria-hidden="true">2.5.</strong> Social Engineering</a></li><li class="chapter-item expanded "><a href="operations.html"><strong aria-hidden="true">2.6.</strong> Operations</a></li></ol></li><li class="chapter-item expanded "><a href="defensive.html"><strong aria-hidden="true">3.</strong> Defensive</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="know.html"><strong aria-hidden="true">3.1.</strong> Know</a></li><li class="chapter-item expanded "><a href="detect.html"><strong aria-hidden="true">3.2.</strong> Detect</a></li><li class="chapter-item expanded "><a href="prevent.html"><strong aria-hidden="true">3.3.</strong> Prevent</a></li><li class="chapter-item expanded "><a href="respond.html"><strong aria-hidden="true">3.4.</strong> Respond</a></li><li class="chapter-item expanded "><a href="investigate.html"><strong aria-hidden="true">3.5.</strong> Investigate</a></li><li class="chapter-item expanded "><a href="hunt.html"><strong aria-hidden="true">3.6.</strong> Hunt</a></li><li class="chapter-item expanded "><a href="restore.html"><strong aria-hidden="true">3.7.</strong> Restore</a></li></ol></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">4.</strong> Resources</a></li><li class="chapter-item expanded "><a href="community.html"><strong aria-hidden="true">5.</strong> Community</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="people.html"><strong aria-hidden="true">5.1.</strong> People</a></li><li class="chapter-item expanded "><a href="news.html"><strong aria-hidden="true">5.2.</strong> News</a></li><li class="chapter-item expanded "><a href="cons.html"><strong aria-hidden="true">5.3.</strong> Cons</a></li><li class="chapter-item expanded "><a href="ctfs.html"><strong aria-hidden="true">5.4.</strong> CTFs</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">1337.guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p></p>
+<center><img src="./glider.png" alt="drawing" width="200"></center>
+<p></p>
+<center><i>A comprehensive introduction to information security and a reference guide to the major areas of the field for beginners and pros alike</i></center>
+<p></p>
+<blockquote>
+<p><em>&quot;Why be a hacker?&quot;</em></p>
+</blockquote>
+<p>Apart from the obvious (IT’S COOL), there are many hackers that hack with malicious intent. We call them attackers or threat actors in the professional world. They can be cyber criminals going after profit at the expense of others, Nation states conducting intelligence operations or cyber warfare, or even so-called “hacktivists” who hack for a cause. These attackers cost the world approx. $X per year (as of 20XX). Because of this, there is an increasingly growing need for those who choose to hack for good (known as “white hats” or ethical hackers). Security professionals with the same skills as the attackers who can attack their own organizations first to discover and fix weaknesses before the real threat actors take advantage of them. Yes, the world wants YOU to be a hacker.</p>
+<blockquote>
+<p><em>“Ok, so I want to become one… but how?”</em></p>
+</blockquote>
+<p>To the uninitiated, hacking is a term which is shrouded in mystery. To many beginners without understanding it simply conjures images of figures like Neo or a young John Connor exhibiting arcane digital magic; typing fast before proclaiming 'I'm in'. To tell the truth, we hackers have a great love for the mystique surrounding our craft (and will never get tired of watching Zero Cool doing absolutely impossible nonsense), but it’s actually not a supernatural ability despite common conceptions. In reality, it is simply clever engineering and anyone with a passion and dedication for understanding computer systems can become a hacker.</p>
+<blockquote>
+<p><em>“Then what is hacking?”</em></p>
+</blockquote>
+<h2 id="conceptions-of-hacking"><a class="header" href="#conceptions-of-hacking">Conceptions of Hacking</a></h2>
+<p>There are 3 important conceptions of hacking, the first is what we call the “fundamental” conception because it describes what hacking actually is in the simplest possible terms. </p>
+<div class="table-wrapper"><table><thead><tr><th>Fundamental:</th><th>Hacking is the abuse of an input output system. Hacking involves sending input to a system in order to get output from the system that the designer did not intend.</th></tr></thead><tbody>
+</tbody></table>
+</div>
+<p>Reductive yes, but accurate. Think of your car as a system. If you send the “input” of pressing on the gas pedal something will happen inside the system (the fuel will ignite in the engine) and the output is that your wheels turn faster. Imagine if you could press the pedal in a special way that would cause something else to happen, like maybe the hood opening. To give a direct digital example, think of your web browser as a system. You can give input to it in the form of website names in the URL bar. What if you could enter something other than a website name, or some specially formatted website name, that caused your browser to do something other than what the software engineers intended it to do?</p>
+<p>The second conception of hacking we call the “motivational” conception because it describes the areas of opportunity in a target of a hacker and what the hacker ultimately wants to accomplish. </p>
+<div class="table-wrapper"><table><thead><tr><th>Motivational:</th><th>The area of a target that is exposed to hacker risk is anywhere they have a need to provide software/hardware access to either internal employees or external customers. Hackers aim to either disrupt that software/hardware or steal data from it.</th></tr></thead><tbody>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th>Functional:</th><th>In order to be the most effective hacker possible for a given target you must understand the system plus the underlying architecture and the people who operate them. Metal → Services accessible at perimeter + people who can access them (social engineering)</th></tr></thead><tbody>
+</tbody></table>
+</div>
+<blockquote>
+<p><em>&quot;Let's get learning!&quot;</em></p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fundamentals"><a class="header" href="#fundamentals">Fundamentals</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-does-a-computer-work"><a class="header" href="#how-does-a-computer-work">How Does A Computer Work?</a></h1>
+<p><br />
+</p>
+<center><img src="./computer.png" alt="drawing" width="500"></center><div style="break-before: page; page-break-before: always;"></div><h1 id="linux-essentials"><a class="header" href="#linux-essentials">Linux Essentials</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="code"><a class="header" href="#code">Code</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="infrastructure"><a class="header" href="#infrastructure">Infrastructure</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-infamous-browser-question"><a class="header" href="#the-infamous-browser-question">The Infamous Browser Question</a></h1>
+<p><br />
+</p>
+<center><img src="./url.png" alt="drawing" width="500"></center>
+<p><br />
+</p>
+<blockquote>
+<p><em>&quot;What happens when you put a domain name in the URL bar of a browser and hit enter?&quot;</em></p>
+</blockquote>
+<p>Seems pretty simple. You go to the website! Yes... but what about every step in-between?</p>
+<div class="table-wrapper"><table><thead><tr><th>Step</th><th>Location</th><th>Explanation</th><th>Related Technologies</th></tr></thead><tbody>
+<tr><td>User Input</td><td>user endpoint</td><td>You start by typing a URL (Uniform Resource Locator) into the address bar of your web browser. This URL typically includes the protocol (http:// or https://) and the domain name of the website you want to visit.</td><td>- Browser</td></tr>
+<tr><td>DNS Resolution</td><td>network</td><td>The browser needs to find the IP address associated with the domain name. It sends a Domain Name System (DNS) query to a DNS server (usually provided by your Internet Service Provider or a public DNS server like Google's 8.8.8.8) to resolve the domain name into an IP address.</td><td>- DNS (port 53)</td></tr>
+<tr><td>DNS Server Query</td><td>network</td><td>If the DNS server has the IP address cached, it returns the IP address to your browser. Otherwise, it queries other DNS servers recursively until it finds the IP address. The DNS response includes a time-to-live (TTL) value indicating how long the IP address can be cached.</td><td></td></tr>
+<tr><td>TCP/IP</td><td>network</td><td>Your browser initiates a Transmission Control Protocol (TCP) connection to the IP address obtained from DNS. This is done through a series of steps called the TCP handshake, which involves SYN, SYN-ACK, and ACK packets exchanged between your browser and the web server.</td><td></td></tr>
+<tr><td>HTTP</td><td>network</td><td>Once the TCP connection is established, your browser sends an HTTP (Hypertext Transfer Protocol) request to the web server. The request includes information like the method (GET, POST, etc.), headers, and the specific resource (path) you're requesting.</td><td></td></tr>
+<tr><td>Web Server Processing</td><td>provider endpoint</td><td>The web server receives the HTTP request. It processes the request, determines the appropriate response, and locates the requested resource on the server's file system or through other means (e.g., database queries).</td><td>- Web Servers: nginx, apache, node.js, IIS</td></tr>
+<tr><td>Server Side Processing</td><td>provider endpoint</td><td>If the requested resource is dynamic (e.g., a PHP script or a database-driven page), the server-side code is executed to generate the content. This can involve retrieving data from a database, performing calculations, or generating HTML content.</td><td>- Backend runtimes: javascript(node, express), python(django, flask), java(spring), php(laravel), .NET(ASP) - Containerization: Docker, LXC</td></tr>
+<tr><td>Response</td><td>network</td><td>The server generates an HTTP response that includes a response status, headers, and the content of the requested resource. The response can also include cookies, caching directives, and other metadata.</td><td></td></tr>
+<tr><td>Rendering</td><td>user endpoint</td><td>Your browser receives the HTTP response and processes the HTML, CSS, JavaScript, and other assets to render the webpage. It interprets the HTML structure, styles the content using CSS, and executes JavaScript to add interactivity.</td><td>- HTML - javascript</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="offensive"><a class="header" href="#offensive">Offensive</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="web"><a class="header" href="#web">Web</a></h1>
+<h2 id="recon"><a class="header" href="#recon">Recon</a></h2>
+<h2 id="technologies--techniques"><a class="header" href="#technologies--techniques">Technologies &amp; Techniques</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="network"><a class="header" href="#network">Network</a></h1>
+<h2 id="reconenumeration"><a class="header" href="#reconenumeration">recon/enumeration</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="post-exploitation"><a class="header" href="#post-exploitation">Post Exploitation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="binary-exploitation"><a class="header" href="#binary-exploitation">Binary Exploitation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="social-engineering"><a class="header" href="#social-engineering">Social Engineering</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="operations"><a class="header" href="#operations">Operations</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="defensive"><a class="header" href="#defensive">Defensive</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="know"><a class="header" href="#know">Know</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="detect"><a class="header" href="#detect">Detect</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="prevent"><a class="header" href="#prevent">Prevent</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="respond"><a class="header" href="#respond">Respond</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="investigate"><a class="header" href="#investigate">Investigate</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hunt"><a class="header" href="#hunt">Hunt</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="restore"><a class="header" href="#restore">Restore</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resources"><a class="header" href="#resources">Resources</a></h1>
+<h2 id="sites-you-should-know-about"><a class="header" href="#sites-you-should-know-about">Sites You Should Know About</a></h2>
+<h2 id="learning-platforms--resources"><a class="header" href="#learning-platforms--resources">Learning Platforms &amp; Resources</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="community"><a class="header" href="#community">Community</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="people"><a class="header" href="#people">People</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="news"><a class="header" href="#news">News</a></h1>
+<h2 id="packet-storm"><a class="header" href="#packet-storm"><a href="https://packetstormsecurity.com/">Packet Storm</a></a></h2>
+<p>Great security news source and also has one of the best feeds displaying new vulnerabilities and exploits.</p>
+<h2 id="hacker-news"><a class="header" href="#hacker-news"><a href="https://news.ycombinator.com/">Hacker News</a></a></h2>
+<p>Good for keeping up to date with tech in general. Features content promoted by users (similar to Reddit) who are mostly in the industry.</p>
+<h2 id="bleeping-computer"><a class="header" href="#bleeping-computer"><a href="https://www.bleepingcomputer.com/">Bleeping Computer</a></a></h2>
+<p>Security news.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cons"><a class="header" href="#cons">Cons</a></h1>
+<h2 id="prominent-conventions--conferences"><a class="header" href="#prominent-conventions--conferences">Prominent Conventions &amp; Conferences</a></h2>
+<ul>
+<li>Defcon</li>
+<li>Blackhat</li>
+<li>RSA</li>
+<li>USENIX Security Symposium</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ctfs"><a class="header" href="#ctfs">CTFs</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

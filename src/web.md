@@ -1,5 +1,0 @@
-# Web
-
-## Recon
-
-## Technologies & Techniques
